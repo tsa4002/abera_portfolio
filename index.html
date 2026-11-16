@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f4f4f2" name="theme-color"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="Abera. Creative technology, interactive experiences, computational art and experimental media." name="description"/>
+<title>abera.</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<div class="site-shell" id="top">
+<header class="site-header">
+<a aria-label="abera home" class="wordmark" href="#top">abera.</a>
+<nav aria-label="Main navigation" class="main-nav">
+<a href="#work">Work</a>
+<a href="#about-bottom">About</a>
+<a href="mailto:tsega2130@gmail.com">Contact</a>
+</nav>
+</header>
+<main>
+<section aria-labelledby="intro-title" class="intro">
+<h1 id="intro-title">CREATIVE TECH</h1>
+<p>Programming, interactive media, and experimental design</p>
+</section>
+<section aria-labelledby="work-title" class="work-section" id="work">
+<div class="section-heading"><h2 id="work-title">Selected work</h2></div>
+<div class="project-list">
+<article class="project" id="infinicine">
+<button aria-controls="details-infinicine" aria-expanded="false" class="project-toggle" type="button">
+<span class="project-info">
+<span class="project-index">01</span>
+<span class="project-name">Infinicine</span>
+<span class="project-description">A continuous continuity error.</span>
+<span class="project-meta">Experimental film</span>
+</span>
+<span aria-hidden="true" class="media-placeholder media-film gif-frame gif-preview">
+<img alt="Infinicine animated preview" class="gif-image" loading="eager" decoding="async" src="assets/gifs/infinicine.gif"/>
+<span class="gif-fallback">GIF PREVIEW<br/>assets/gifs/infinicine.gif</span>
+</span>
+<span aria-hidden="true" class="project-action">+</span>
+</button>
+<div class="project-details" hidden="" id="details-infinicine">
+<div class="media-slot video-frame">
+<video class="project-video" playsinline preload="metadata" aria-label="Infinicine project demo"><source src="assets/videos/infinicine.mp4" type="video/mp4"/></video><button class="video-play-toggle" type="button" tabindex="-1" aria-label="Play Infinicine project demo" aria-pressed="false" data-video-title="Infinicine project demo"><span class="video-control-icon video-control-play" aria-hidden="true"></span><span class="video-control-icon video-control-pause" aria-hidden="true"></span></button><div class="video-controls" aria-label="Video controls"><button class="video-control-button video-bar-play" type="button" aria-label="Play Infinicine project demo" aria-pressed="false"><span class="bar-icon bar-icon-play" aria-hidden="true"></span><span class="bar-icon bar-icon-pause" aria-hidden="true"></span></button><input class="video-progress" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek Infinicine project demo" /><div class="video-volume-group"><button class="video-control-button video-mute" type="button" aria-label="Mute" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="volume-wave" d="M16 9a5 5 0 0 1 0 6M18.5 6.5a9 9 0 0 1 0 11"/><path class="volume-muted-mark" d="m16 9 5 6m0-6-5 6"/></svg></button><input class="video-volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume" /></div><button class="video-control-button video-fullscreen" type="button" aria-label="Enter fullscreen for Infinicine project demo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button></div>
+<span class="video-fallback">Infinicine Demo Video</span>
+</div>
+<div class="details-intro"><span class="detail-kicker">ABOUT THE PROJECT</span><p>Infinicine is an experimental video player that dynamically transitions between different movies based on overlapping dialogue. A user enters a word and is placed into a scene where that word is spoken. As the dialogue unfolds, the player finds a shared word in another movie and hops to that scene, creating a surreal, hybrid narrative from fragments of many films.</p></div>
+<div class="details-grid">
+<section><h3>Inspiration</h3><p>I stumbled upon <a href="https://eternalboxmirror.xyz/" rel="noreferrer" target="_blank">Infinite Jukebox</a>, a hackathon project that creates a never-ending song by hopping between similar-sounding beats. I loved visualizing the possible paths a song could take and wondered whether something similar could work for movies.</p></section>
+<section><h3>How it works</h3><p>I sourced public-domain films across genres, then used FFmpeg to standardize resolution, audio levels and frame rates. Subtitle files were too imprecise for natural transitions, so I used Whisper for word-level timestamps, cleaned low-confidence and throwaway words, and built an index mapping each word to its occurrences across the films. During playback, the program selects a word from the current scene, finds an eligible occurrence in another movie, and jumps to it.</p></section>
+
+
+</div>
+<div class="detail-links"><a class="project-cta" href="https://infinicine.onrender.com/" rel="noreferrer" target="_blank">Hop through films here!</a><span>Tools: Python, JS, Bash</span></div>
+
+</div>
+</article>
+<article class="project" id="scrabble-snake">
+<button aria-controls="details-scrabble-snake" aria-expanded="false" class="project-toggle" type="button">
+<span class="project-info">
+<span class="project-index">02</span>
+<span class="project-name">ScrabbleSnake</span>
+<span class="project-description">Slither through a sea of letters.</span>
+<span class="project-meta">Browser game</span>
+</span>
+<span aria-hidden="true" class="media-placeholder media-game gif-frame gif-preview">
+<img alt="Scrabble Snake animated preview" class="gif-image" loading="eager" decoding="async" src="assets/gifs/scrabble-snake.gif"/>
+<span class="gif-fallback">GIF PREVIEW<br/>assets/gifs/scrabble-snake.gif</span>
+</span>
+<span aria-hidden="true" class="project-action">+</span>
+</button>
+<div class="project-details" hidden="" id="details-scrabble-snake">
+<div class="media-slot video-frame">
+<video class="project-video" playsinline preload="metadata" aria-label="Scrabble Snake game demo"><source src="assets/videos/scrabble-snake.mp4" type="video/mp4"/></video><button class="video-play-toggle" type="button" tabindex="-1" aria-label="Play Scrabble Snake game demo" aria-pressed="false" data-video-title="Scrabble Snake game demo"><span class="video-control-icon video-control-play" aria-hidden="true"></span><span class="video-control-icon video-control-pause" aria-hidden="true"></span></button><div class="video-controls" aria-label="Video controls"><button class="video-control-button video-bar-play" type="button" aria-label="Play Scrabble Snake game demo" aria-pressed="false"><span class="bar-icon bar-icon-play" aria-hidden="true"></span><span class="bar-icon bar-icon-pause" aria-hidden="true"></span></button><input class="video-progress" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek Scrabble Snake game demo" /><div class="video-volume-group"><button class="video-control-button video-mute" type="button" aria-label="Mute" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="volume-wave" d="M16 9a5 5 0 0 1 0 6M18.5 6.5a9 9 0 0 1 0 11"/><path class="volume-muted-mark" d="m16 9 5 6m0-6-5 6"/></svg></button><input class="video-volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume" /></div><button class="video-control-button video-fullscreen" type="button" aria-label="Enter fullscreen for Scrabble Snake game demo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button></div>
+<span class="video-fallback">ADD VIDEO: assets/videos/scrabble-snake.mp4</span>
+</div>
+<div class="details-intro"><span class="detail-kicker">ABOUT THE PROJECT</span><p>ScrabbleSnake combines the letter tiles and point system of Scrabble with the collection mechanics of the arcade game Snake. Players move through an arena and collect the Scrabble tile letters in the order words are spelled to gain points.</p></div>
+<div class="details-grid">
+<section><h3>Inspiration</h3><p>At the risk of a cease and desist letter, I will confess ScrabbleSnake is a compound of the Hasbro game Scrabble and the popular arcade game Snake. I designed the tiles and point system with Scrabble in mind. The gameplay itself skews more towards the <a href="https://slither.io/" rel="noreferrer" target="_blank">slither.io</a> iteration of snake where drops can be collected that lengthen the snake's body in an expansive map.</p></section>
+<section><h3>How it works</h3><p>ScrabbleSnake is a three mode browser game built with plain HTML, CSS, and JavaScript. A fixed-timestep game loop updates the snake's position, handles collisions, and spawns new letters. CSS animations drive visual feedback for events like shaking tiles, heart losses, and timer bar transitions. Sound effects reflect the feel of a physical board game, such as the crash of the tiles after the user loses their letters. I meshed this effect with chiptune sounds for the background music to bring in the energy of classic 8-bit arcade games.</p></section>
+
+</div>
+<div class="detail-links"><a class="project-cta" href="https://tsa4002.github.io/ScrabbleSnake/" rel="noreferrer" target="_blank">Play the game!</a><span>Tools: JS, CSS</span></div>
+
+</div>
+</article>
+<article class="project" id="six-degrees-of-sound">
+<button aria-controls="details-six-degrees-of-sound" aria-expanded="false" class="project-toggle" type="button">
+<span class="project-info">
+<span class="project-index">03</span>
+<span class="project-name">Six Degrees of Sound</span>
+<span class="project-description">Who is the Kevin Bacon of music?</span>
+<span class="project-meta">Musical Connections</span>
+</span>
+<span aria-hidden="true" class="media-placeholder media-network image-asset-frame image-preview svg-preview"><img alt="" class="asset-image" loading="eager" decoding="async" src="assets/svg/six-degrees-of-sound.svg"/><span class="image-fallback">SVG PREVIEW<br/>assets/svg/six-degrees-of-sound.svg</span></span>
+<span aria-hidden="true" class="project-action">+</span>
+</button>
+<div class="project-details" hidden="" id="details-six-degrees-of-sound">
+<div class="media-slot video-frame"><video class="project-video" playsinline preload="metadata" aria-label="Six Degrees of Sound demo"><source src="assets/videos/six-degrees-of-sound.mp4" type="video/mp4"/></video><button class="video-play-toggle" type="button" tabindex="-1" aria-label="Play Six Degrees of Sound demo" aria-pressed="false" data-video-title="Six Degrees of Sound demo"><span class="video-control-icon video-control-play" aria-hidden="true"></span><span class="video-control-icon video-control-pause" aria-hidden="true"></span></button><div class="video-controls" aria-label="Video controls"><button class="video-control-button video-bar-play" type="button" aria-label="Play Six Degrees of Sound demo" aria-pressed="false"><span class="bar-icon bar-icon-play" aria-hidden="true"></span><span class="bar-icon bar-icon-pause" aria-hidden="true"></span></button><input class="video-progress" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek Six Degrees of Sound demo" /><div class="video-volume-group"><button class="video-control-button video-mute" type="button" aria-label="Mute" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="volume-wave" d="M16 9a5 5 0 0 1 0 6M18.5 6.5a9 9 0 0 1 0 11"/><path class="volume-muted-mark" d="m16 9 5 6m0-6-5 6"/></svg></button><input class="video-volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume" /></div><button class="video-control-button video-fullscreen" type="button" aria-label="Enter fullscreen for Six Degrees of Sound demo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button></div><span class="video-fallback">ADD VIDEO: assets/videos/six-degrees-of-sound.mp4</span></div>
+<div class="details-intro"><span class="detail-kicker">ABOUT THE PROJECT</span><p>An interactive tool for discovering connections between two musical artists through overlapping collaborations</p></div>
+<div class="details-grid">
+<section><h3>Inspiration</h3><p>I was inspired to make Six Degrees of Sound while playing the six-degrees-of-separation parlor game with friends. We quickly connected ourselves to religious figures, presidents and celebrities, and the conversation turned to graph theory. I wondered whether a similar network could be drawn within music using overlapping collaborations.</p></section>
+<section><h3>How it works</h3><p>After a user selects two artists, a bidirectional breadth-first search traverses the MusicBrainz dataset to find a connection. Each artist is a node, and an edge connects artists who appear together on a recording. Album covers and track previews are pulled from Apple Music as each intermediary link is displayed. I filtered the community-maintained MusicBrainz data to remove non-musical entries, unofficial remixes and recordings unaffiliated with a label, then optimized the resulting graph for pathfinding.</p></section>
+
+</div>
+<div class="detail-links"><a class="project-cta" href="https://sixdegreesofsound.onrender.com/" rel="noreferrer" target="_blank">Explore the Music Industry!</a><span>Tools: Python, JS</span></div>
+
+</div>
+</article>
+<article class="project" id="proteins-in-ar">
+<button aria-controls="details-proteins-in-ar" aria-expanded="false" class="project-toggle" type="button">
+<span class="project-info">
+<span class="project-index">04</span>
+<span class="project-name">Proteins in Augmented Reality</span>
+<span class="project-description">Visualize molecular machines.</span>
+<span class="project-meta">Visualization</span>
+</span>
+<span aria-hidden="true" class="media-placeholder media-protein gif-frame gif-preview"><img alt="Proteins in Augmented Reality animated preview" class="gif-image" loading="eager" decoding="async" src="assets/gifs/proteins-in-ar.gif"/><span class="gif-fallback">GIF PREVIEW<br/>assets/gifs/proteins-in-ar.gif</span></span>
+<span aria-hidden="true" class="project-action">+</span>
+</button>
+<div class="project-details" hidden="" id="details-proteins-in-ar">
+<div class="media-slot video-frame youtube-frame">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/po3nVRNmu_s"
+    title="Proteins in Augmented Reality"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+<div class="details-intro"><span class="detail-kicker">ABOUT THE PROJECT</span><p>An interactive augmented reality experience that uses hand tracking to let people manipulate 3D protein structures in space. It turns abstract molecular arrangements into something more intuitive for teaching, learning and engaging with structural biology.</p></div>
+<div class="details-grid">
+<section><h3>Inspiration</h3><p>As an undergraduate, I joined a biochemistry research lab studying how a protein transports molecules in and out of a cell. One principle came up repeatedly: protein form determines protein function. Understanding complex protein structures through 2D projections and static models can be challenging, so I wanted to make their shapes easier to explore in three dimensions.</p></section>
+<section><h3>How it works</h3><p>I downloaded protein structures from the <a href="https://www.rcsb.org/" rel="noreferrer" target="_blank">Protein Data Bank</a> and customized the models in ChimeraX to highlight structural features. I exported them as GLB files into Lens Studio and programmed hand tracking in JavaScript so users could rotate and scale the proteins. A facial-gesture trigger reveals protein names and measured finger vectors when users point to each name.</p></section>
+
+
+</div>
+<div class="detail-links"><span>Tools: AR, Javascript</span></div>
+
+</div>
+</article>
+<article class="project" id="self-portrait">
+<button aria-controls="details-self-portrait" aria-expanded="false" class="project-toggle" type="button">
+<span class="project-info">
+<span class="project-index">05</span>
+<span class="project-name">Self Portrait</span>
+<span class="project-description">Story of Po.</span>
+<span class="project-meta">Story</span>
+</span>
+<span aria-hidden="true" class="media-placeholder media-portrait image-asset-frame image-preview portrait-preview"><img alt="" class="asset-image" loading="eager" decoding="async" src="assets/images/self-portrait-preview.jpg"/><span class="image-fallback">IMAGE PREVIEW<br/>assets/images/self-portrait-preview.jpg</span></span>
+<span aria-hidden="true" class="project-action">+</span>
+</button>
+<div class="project-details" hidden="" id="details-self-portrait"><div class="expanded-image-frame image-asset-frame portrait-full-frame"><img alt="Self Portrait, Story of Po" class="asset-image" loading="eager" decoding="async" src="assets/images/self-portrait.jpg"/><span class="image-fallback">ADD IMAGE<br/>assets/images/self-portrait.jpg</span></div>
+<div class="story-copy">
+<p>After years of futilely begging for a pet, my brother decided it was better to ask for forgiveness than permission and smuggled in a small tuxedo kitten named Po. My parents, incredulous at his gall, tried to weed out any co-conspirators but it was truly a unilateral move. I admitted my admiration for the tactic but confessed I would&rsquo;ve adopted a dog.</p>
+<p>Worried the house was on track to resemble a zoo, my parents tried to use the unglamorous side of pet ownership as a deterrent. They made him tally up the costs of food, toys, pet insurance, grooming, and any incidental expense. He had to map out a training plan, research local vets, and draft out a cleaning schedule. Seeing the full weight of details spelled out, I joined my parents in swearing off any responsibility that could spawn from her.</p>
+<p>My brother dutifully nodded his head and hid his widening grin, aware that his gambit had worked.</p>
+<p>Po was running a gambit of her own, rapidly working her way into our hearts with tiny chirps and the chaotic grace of darting between our legs at every turn. No bigger than the palm of my hand, she explored her new home with an oversized curiosity. She loved to perch on top of my shoulders and coil up on my bed. It wasn&rsquo;t long before I started buying her toys, seeing the previous responsibilities not as things I had to do but things I would want to do.</p>
+<p>We grew up but she didn&rsquo;t change much in size. She would fall into bouts of mysterious illness that anxious vet visits failed to resolve, leaving symptom management as the only viable course of action. Regardless, her playful spirit never diminished. Every time I returned home from college, she would bolt down to scold me with indignant chirps, as if demanding to know where I&rsquo;d been.</p>
+<p>Then, just as quickly, she&rsquo;d settle back into old habits, clambering up and draping herself across my shoulder to reclaim her favorite post.</p>
+<p>When a digital art assignment called for a self-portrait, it only felt natural to include Po. I took a photo of her overlooking from her usual spot on my shoulder and adjusted the saturation, drew out the negative space to suggest an emerging figure, and added a soft halo above her head as a reference to the shoulder angels trope common in animation.</p>
+<p>Two days later, I received a late-night call from my sister. Her voice cracked as she told me Po had an emergency and was rushed to the vet. They diagnosed her with feline infectious peritonitis and recommended euthanasia. Through tears, I said goodbye over a video call as Po lay heavily sedated on a table, her once energetic frame now motionless.</p>
+<p>In the days after Po passed, I returned to the self-portrait. What had started as Po&rsquo;s lighthearted inclusion now carried deeper weight. I adjusted the contrast and brightened the halo&rsquo;s glow. Above her, I added stained glass arches that gently descended, as if reaching to lift her upward.</p>
+</div>
+<div class="detail-links"><span>Tools: Illustrator</span></div>
+
+</div>
+</article>
+<article class="project" id="cacophony">
+<button aria-controls="details-cacophony" aria-expanded="false" class="project-toggle" type="button">
+<span class="project-info">
+<span class="project-index">06</span>
+<span class="project-name">Cacophony</span>
+<span class="project-description">A dynamic collage.</span>
+<span class="project-meta">Audiovisual</span>
+</span>
+<span aria-hidden="true" class="media-placeholder media-cacophony gif-frame gif-preview"><img alt="Cacophony animated preview" class="gif-image" loading="eager" decoding="async" src="assets/gifs/cacophony.gif"/><span class="gif-fallback">GIF PREVIEW<br/>assets/gifs/cacophony.gif</span></span>
+<span aria-hidden="true" class="project-action">+</span>
+</button>
+<div class="project-details" hidden="" id="details-cacophony">
+<div class="media-slot video-frame"><video class="project-video" playsinline preload="metadata" aria-label="Cacophony demo"><source src="assets/videos/cacophony.mp4" type="video/mp4"/></video><button class="video-play-toggle" type="button" tabindex="-1" aria-label="Play Cacophony demo" aria-pressed="false" data-video-title="Cacophony demo"><span class="video-control-icon video-control-play" aria-hidden="true"></span><span class="video-control-icon video-control-pause" aria-hidden="true"></span></button><div class="video-controls" aria-label="Video controls"><button class="video-control-button video-bar-play" type="button" aria-label="Play Cacophony demo" aria-pressed="false"><span class="bar-icon bar-icon-play" aria-hidden="true"></span><span class="bar-icon bar-icon-pause" aria-hidden="true"></span></button><input class="video-progress" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek Cacophony demo" /><div class="video-volume-group"><button class="video-control-button video-mute" type="button" aria-label="Mute" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="volume-wave" d="M16 9a5 5 0 0 1 0 6M18.5 6.5a9 9 0 0 1 0 11"/><path class="volume-muted-mark" d="m16 9 5 6m0-6-5 6"/></svg></button><input class="video-volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume" /></div><button class="video-control-button video-fullscreen" type="button" aria-label="Enter fullscreen for Cacophony demo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button></div><span class="video-fallback">ADD VIDEO: assets/videos/cacophony.mp4</span></div>
+<div class="details-intro"><span class="detail-kicker">ABOUT THE PROJECT</span><p>Cacophony turns dialogue from multiple films into an interactive audiovisual collage. A user enters a word and a grid of clips plays simultaneously until the different scenes sync on that word, briefly forming a chaotic chorus before falling back into disarray.</p></div>
+<div class="details-grid">
+<section><h3>Inspiration</h3><p>While building Infinicine, I kept thinking about other ways to repurpose the extracted movie clips. Cacophony grew from that question: instead of moving between films, what if several clips played at once and converged on the same spoken word?</p></section>
+<section><h3>How it works</h3><p>Cacophony uses Infinicine&rsquo;s word-level timestamps and lookup index. When a user enters a word, a Python script selects up to eight occurrences, applies adjustable lead-in and lead-out buffers, and uses FFmpeg to cut the clips. On the front end, a 3&times;3 CSS grid reserves the center cell for the input. JavaScript places the clips around it, preloads them and starts synchronized playback with audio. Drag-and-drop handlers let users rearrange the cells and immediately resynchronize playback.</p></section>
+
+</div>
+<div class="detail-links"><span>Tools: Python, Bash, JS</span></div>
+
+</div>
+</article>
+</div>
+</section>
+</main>
+<footer class="site-footer" id="footer-line"><a aria-label="abera home" class="wordmark" href="#top">abera.</a><div class="footer-links"><a class="email-link" href="mailto:tsega2130@gmail.com" id="contact">Email</a><!-- Replace this URL with your LinkedIn profile. --><a class="email-link" href="https://linkedin.com/in/tsega-ab-abera-8885b8194" rel="noreferrer" target="_blank">LinkedIn</a></div></footer><section aria-labelledby="about-heading" class="about-bottom" id="about-bottom"><h2 id="about-heading">About</h2><p>My background in computational biology taught me how to understand, simulate, and integrate real-world dynamics into digital experiences that feel natural, insightful, and deeply rewarding. In an interdisciplinary research environment, I developed both the technical depth and the communication skills needed to work confidently with people from many backgrounds while tackling complex challenges. That foundation also fuels my creative outlet, where I combine technical rigor and narrative thinking to bring digital experiences to life.</p><p>My projects span personal creations and collaborative work with communities that share and teach creative technology. Through these experiences, I have built a solid grasp on web frameworks and also gained exposure to domain specific tools like Processing and p5.js. I&rsquo;ve used them to experiment with game mechanics, augmented reality, Python-driven media workflows, and speech recognition systems in pursuit of new ways to create engaging digital experiences.</p></section>
+<section aria-labelledby="cv-heading" class="cv-section" id="curriculum-vitae">
+<details class="cv-details">
+<summary id="cv-heading">Curriculum Vitae</summary>
+<div class="cv-content">
+<section class="cv-group">
+<h3>Education</h3>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Davidson College</strong><span>August 2018 - May 2022</span></div>
+<p class="cv-subheading"><em>Davidson, NC</em> &middot; Bachelor of Science, Major in Biology</p>
+<ul><li><strong>Relevant coursework:</strong> Bioinformatics Programming, Molecular Biology, Biostatistics, Cellular Biology, Genomics, Calculus and Biological Modeling, Lab Methods in Genomics, Genetics, Digital Art</li></ul>
+</div>
+</section>
+
+<section class="cv-group">
+<h3>Skills</h3>
+<ul class="cv-skills">
+<li><strong>Proficient in:</strong> R, Python, Bash, Git</li>
+<li><strong>Experience with:</strong> JavaScript, React, Node.js, Django, Adobe Suite</li>
+<li><strong>Bioinformatics expertise:</strong> Single-Cell Multi-Omics, Spatial Transcriptomics, GoT, Variant Calling, AIRR Analysis, Lineage Tracing</li>
+<li><strong>Languages:</strong> English (Native), Amharic (Native), Spanish (CEFR B1)</li>
+</ul>
+</section>
+
+<section class="cv-group">
+<h3>Experience</h3>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Creative Technologist</strong><span>July 2025 - Present</span></div>
+<ul>
+<li>Developed an augmented reality experience that uses hand tracking to manipulate 3D protein structures in space.</li>
+<li>Constructed a collaboration graph from MusicBrainz and leveraged breadth-first search to reveal the shortest connection path between any two artists.</li>
+<li>Developed a Python program that uses FFmpeg and Whisper to navigate across films through shared dialogue.</li>
+</ul>
+</div>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Bioinformatics Research Technician II</strong><span>July 2022 - June 2025</span></div>
+<p class="cv-subheading"><em>Weill Cornell Medical College</em></p>
+<ul>
+<li>Used spatial transcriptomics to untangle tumor microenvironment interactions in classic Hodgkin lymphoma.</li>
+<li>Developed a method to profile multiple somatic mutations and full transcriptomes from frozen or FFPE samples.</li>
+<li>Integrated protein expression, whole transcriptomes, and chromatin accessibility to investigate molecular mechanisms of ASXL1.</li>
+<li>Used variant calling and lineage tracing to track polarized cell states induced by IFN-alpha.</li>
+</ul>
+</div>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Independent Researcher</strong><span>August 2021 - May 2022</span></div>
+<p class="cv-subheading"><em>Davidson College Bioinformatics Lab</em></p>
+<ul>
+<li>Worked on OrthoVar, a program aligning human variants to orthologous sequences within model organisms.</li>
+<li>Used Bash scripting and an API to allow for dynamic integration with ClinVar's database.</li>
+<li>Used Flask to create a web interface and increase accessibility, and Docker to containerize dependencies.</li>
+</ul>
+</div>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Digital Health Analyst</strong><span>November 2020 - December 2020</span></div>
+<p class="cv-subheading"><em>Navigating Cancer Internship</em></p>
+<ul>
+<li>Gained hands-on experience working with electronic health records (EHRs).</li>
+<li>Analyzed symptom and check-in data reported by cancer patients to enhance personalized care.</li>
+<li>Developed visual reports and dashboards summarizing trends for team leaders.</li>
+</ul>
+</div>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Adjacent Academies Student</strong><span>August 2020 - December 2020</span></div>
+<ul>
+<li>Participated in a coding bootcamp providing hands-on experience with JavaScript, PostgreSQL, Git, and HTML/CSS.</li>
+<li>Collaborated within small groups to develop and deploy biweekly projects.</li>
+<li>Developed a web application for a local resource center featuring a relational database for inventory management, an updated user interface, and accessibility-focused design improvements.</li>
+</ul>
+</div>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Independent Researcher</strong><span>May 2019 - April 2020</span></div>
+<p class="cv-subheading"><em>Davidson College Biochemistry Lab</em></p>
+<ul>
+<li>Identified essential residues of ScBor1 using modeling and alignment software.</li>
+<li>Mutated and tested residues using genetic complementation assays to determine their impact on ScBor1.</li>
+<li>Conducted protein purification protocols to confirm localization of ScBor1.</li>
+</ul>
+</div>
+</section>
+
+<section class="cv-group">
+<h3>Papers</h3>
+<ol class="cv-publications">
+<li>Lama, C., Isakov, D., Rosenberg, S., Quijada-Álamo, M., Saurty-Seerunghen, M.S., Moein, S., Abera, T-A., Sakaguchi, O., et al. Type 1 interferon perturbates clonal competition by reshaping human blood development. <em>Nature Genetics</em> (2026). <a href="https://doi.org/10.1038/s41588-026-02751-3" target="_blank" rel="noreferrer">doi:10.1038/s41588-026-02751-3</a></li>
+<li>Zeng, A. G. X., Nagree, M. S., Jakobsen, N. A., Shah, S., Varesi, A., Kang, J. R. W., Murison, A., Cheong, J. G., Turkalj, S., Zhang, X., Radtke, F. A., Abera, T-A., et al. Human haematopoietic stem cells remember inflammatory stress. <em>Nature</em> 655, 458-467 (2026). <a href="https://doi.org/10.1038/s41586-026-10522-7" target="_blank" rel="noreferrer">doi:10.1038/s41586-026-10522-7</a></li>
+<li>Pak, M., Saurty-Seerunghen, M. S., Wise, K., Abera, T-A., Lama, C., Parghi, N., Kang, T., Sun, X., Gao, Q., Bao, L., Roshal, M., Allan, J. N., Furman, R. R., Martelotto, L. G., &amp; Nam, A. S. Co-mapping clonal and transcriptional heterogeneity in somatic evolution via GoT-Multi. <em>Cell Genomics</em> (2026). <a href="https://doi.org/10.1016/j.xgen.2025.101036" target="_blank" rel="noreferrer">doi:10.1016/j.xgen.2025.101036</a></li>
+<li>Kramer, F., Riedemann, M., Abera, T-A., Hem, J., Herce, A., Marneth, A., et al. (2025). Mutant ASXL1 exacerbates CALR-mutant MPN by enhancing a distinct megakaryocyte differentiation program. <em>Manuscript submitted and under revision.</em></li>
+<li>Saurty-Seerunghen, M.S., Moein, S., Abera, T-A., Sun, X., Sharma, S., Lama, C., et al. (2023). Classic Hodgkin lymphomas display neuronal-glial lineage transdifferentiation. <em>Blood.</em> <a href="https://doi.org/10.1182/blood-2023-189533" target="_blank" rel="noreferrer">doi:10.1182/blood-2023-189533</a> <em>Manuscript in preparation.</em></li>
+<li>Beltran, J.L., McGrath, L.G., Caruso, S., Bain, R.K., Hendrix, C.E., Kamran, H., Johnston, H.G., Collings, R.M., Henry, M-CN., Abera, T-AL., et al. Borate Transporters and SLC4 Bicarbonate Transporters Share Key Functional Properties. <em>Membranes.</em> 2023; 13(2):235. <a href="https://doi.org/10.3390/membranes13020235" target="_blank" rel="noreferrer">doi:10.3390/membranes13020235</a></li>
+</ol>
+</section>
+
+<section class="cv-group">
+<h3>Poster presentations</h3>
+<ol class="cv-publications">
+<li>Kramer, F., <strong>Abera, T-A.</strong>, Riedemann, M., et al. CALR-ASXL1 mutation displays an accelerated megakaryocyte differentiation pathway. Poster presented at STARR Cancer Consortium 2024, Cold Spring Harbor, NY.</li>
+<li>Saurty-Seerunghen, M.S., Moein, S., Pak, M., <strong>Abera, T-A.</strong>, et al. Classic Hodgkin Lymphomas Display Neuronal-Glial Lineage Reprogramming. Poster presented at STARR Cancer Consortium 2023, Cold Spring Harbor, NY.</li>
+<li><strong>Abera, T-A.</strong>, Thurtle-Schmidt, D. OrthoVar: Aligning Human Variants to Orthologous Sequences. Poster presented at Verna Case Symposium 2022, Davidson, NC.</li>
+<li><strong>Abera, T-A.</strong>, Thurtle-Schmidt, B. Identifying Essential Residues Within ScBor1. Poster presented at Annual Biomedical Research Conference for Minoritized Scientists 2019, Anaheim, CA.</li>
+</ol>
+</section>
+
+<section class="cv-group">
+<h3>Honors</h3>
+<ul>
+<li>2024 Fulbright UK Semi-Finalist</li>
+<li>2022 APHL-CDC Bioinformatics Fellowship - Declined</li>
+<li>2020 Accepted into GW-SPARC - Canceled due to COVID-19</li>
+<li>2019 Davidson College Research Initiative Grant for Summer Research</li>
+</ul>
+</section>
+
+<section class="cv-group">
+<h3>Leadership</h3>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Student Government Association - Senator</strong><span>February 2020 - May 2022</span></div>
+<p class="cv-subheading"><em>Davidson College</em></p>
+<ul>
+<li>Elected by a class body of over 400 students to serve as a representative.</li>
+<li>Worked within committees to improve textbook accessibility, transportation options, and diversify admissions practices.</li>
+<li>Led a committee to allow students to rent artwork from the school's collection.</li>
+</ul>
+</div>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Residence Life Office - Resident Advisor</strong><span>August 2019 - May 2022</span></div>
+<p class="cv-subheading"><em>Davidson College</em></p>
+<ul>
+<li>Cultivated a supportive and welcoming environment for 25+ residents every year.</li>
+<li>Facilitated multiple educational and recreational programs to promote community.</li>
+<li>Served as a point of resource for academic and personal counseling.</li>
+</ul>
+</div>
+<div class="cv-entry">
+<div class="cv-entry-heading"><strong>Davidson Outdoors - Trip Leader</strong><span>January 2019 - May 2022</span></div>
+<p class="cv-subheading"><em>Davidson College</em></p>
+<ul>
+<li>Planned and led backpacking, mountain-biking, and paddle-boarding trips with 10+ students.</li>
+<li>Developed leadership qualities such as accountability, communication, and problem-solving skills.</li>
+<li>Practiced conflict resolution in stressful environments.</li>
+</ul>
+</div>
+</section>
+</div>
+</details>
+</section>
+</div>
+</body>
+</html>

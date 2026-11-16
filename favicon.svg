@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">abera.</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&amp;display=swap');
+    .wordmark {
+      font-family: "Space Grotesk", Arial, sans-serif;
+      font-size: 47px;
+      font-weight: 500;
+      letter-spacing: 0;
+      font-kerning: normal;
+      fill: #171816;
+    }
+  </style>
+  <rect width="64" height="64" fill="#f4f4f2"/>
+  <text class="wordmark" x="32" y="47" text-anchor="middle">a.</text>
+</svg>
