@@ -646,6 +646,6 @@ a:hover { color: var(--accent); }
   margin-bottom: 0.65rem;
 }
 
-.favorite-works-list li:last-child {
-  margin-bottom: 0;
+#favorite-works + #curriculum-vitae {
+  margin-top: -3rem;
 }
